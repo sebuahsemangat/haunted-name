@@ -18,7 +18,7 @@ export type AssignGhostInput = z.infer<typeof AssignGhostInputSchema>;
 
 const AssignGhostOutputSchema = z.object({
   ghostName: z.string().describe('The generated Indonesian ghost name.'),
-  description: z.string().describe('A short description of the ghost and its relevance to the user\u2019s name.'),
+  description: z.string().describe('A short description in Indonesian Language of the ghost and its relevance to the user\u2019s name.'),
 });
 export type AssignGhostOutput = z.infer<typeof AssignGhostOutputSchema>;
 

@@ -41,7 +41,7 @@ export default function GhostFinder() {
         <CardHeader>
           <CardTitle className="text-center text-2xl font-headline flex items-center justify-center gap-3 text-foreground">
             <Ghost className="text-primary h-7 w-7" />
-            Identitas Hantu Nusantara
+            Masukkan Namamu!
           </CardTitle>
         </CardHeader>
         <CardContent>

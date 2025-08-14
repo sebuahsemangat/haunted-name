@@ -8,7 +8,7 @@ export default function Home() {
 
       <div className="z-10 flex flex-col items-center text-center space-y-4 mb-12">
         <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-foreground">
-          Ghostly Doppelganger
+          Hantu Apa yang Nempelin Kamu? 👻
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl">
           Temukan sisi gaib dari namamu. Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya.
