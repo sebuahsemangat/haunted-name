@@ -1,3 +1,21 @@
+import GhostFinder from '@/components/ghost-finder';
+
 export default function Home() {
-  return <></>;
+  return (
+    <main className="flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-8 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(hsl(var(--accent))_1px,transparent_1px)] [background-size:32px_32px]"></div>
+
+      <div className="z-10 flex flex-col items-center text-center space-y-4 mb-12">
+        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-foreground">
+          Ghostly Doppelganger
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-xl">
+          Temukan sisi gaib dari namamu. Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya.
+        </p>
+      </div>
+
+      <GhostFinder />
+    </main>
+  );
 }
