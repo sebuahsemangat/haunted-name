@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Ghostly Doppelganger',
+  title: 'Nama Hantu',
   description: 'Temukan identitas hantu nusantara berdasarkan namamu.',
 };
 

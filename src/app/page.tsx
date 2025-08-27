@@ -1,4 +1,5 @@
 import GhostFinder from '@/components/ghost-finder';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -6,12 +7,17 @@ export default function Home() {
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(hsl(var(--accent))_1px,transparent_1px)] [background-size:32px_32px]"></div>
 
-      <div className="z-10 flex flex-col items-center text-center space-y-4 mb-12">
-        <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tight text-foreground">
-          Hantu Apa yang Nempelin Kamu? 👻
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-xl">
-          Temukan sisi gaib dari namamu. Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya.
+      <div className="z-10 flex flex-col items-center text-center space-y-6 mb-12">
+        <Image
+          src="https://storage.googleapis.com/aifirebase-7a250.appspot.com/user_images/D_sD-wU4E_e_Qe_7_n8yL/haunted-name.png"
+          alt="Haunted Name"
+          width={800}
+          height={333}
+          className="w-full max-w-lg"
+          priority
+        />
+        <p className="text-lg text-muted-foreground max-w-2xl">
+          Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya. Masukkan namamu dan temukan sisi gaib dirimu.
         </p>
       </div>
 
