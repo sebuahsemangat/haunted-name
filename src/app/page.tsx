@@ -9,7 +9,7 @@ export default function Home() {
 
       <div className="z-10 flex flex-col items-center text-center space-y-6 mb-12">
         <Image
-          src="/logo.png"
+          src="/logo2.png"
           alt="Haunted Name"
           width={400}
           height={291}
