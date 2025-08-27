@@ -5,6 +5,7 @@ import type { AssignGhostOutput } from '@/ai/flows/assign-ghost';
 import { getGhostForName } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Ghost, Loader2 } from 'lucide-react';
@@ -13,6 +14,7 @@ export default function GhostFinder() {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AssignGhostOutput | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,6 +32,7 @@ export default function GhostFinder() {
       });
     } else if (response.result) {
       setResult(response.result);
+      setIsDialogOpen(true);
     }
 
     setLoading(false);
@@ -75,16 +78,18 @@ export default function GhostFinder() {
       </Card>
 
       {result && (
-        <Card className="animate-in fade-in-50 slide-in-from-bottom-5 duration-500 bg-card/70 backdrop-blur-sm border-border/50 shadow-lg shadow-background/10">
-          <CardHeader>
-            <CardTitle className="text-center text-4xl font-headline text-primary">
-              {result.ghostName}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-center text-lg text-muted-foreground leading-relaxed">{result.description}</p>
-          </CardContent>
-        </Card>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogContent className="sm:max-w-md bg-card/90 backdrop-blur-sm border-border/50">
+              <DialogHeader>
+                <DialogTitle className="text-center text-4xl font-headline text-primary">
+                  {result.ghostName}
+                </DialogTitle>
+                <DialogDescription className="text-center text-lg text-muted-foreground leading-relaxed pt-4">
+                  {result.description}
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+        </Dialog>
       )}
     </div>
   );
