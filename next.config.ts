@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'aifirebase-7a250.appspot.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
