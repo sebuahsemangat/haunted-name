@@ -13,7 +13,6 @@ export default function Home() {
           alt="Haunted Name"
           width={400}
           height={291}
-          // className="w-full max-w-lg"
           priority
         />
         <p className="text-lg text-muted-foreground max-w-2xl">
