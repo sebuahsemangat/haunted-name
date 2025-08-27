@@ -11,13 +11,13 @@ export default function Home() {
         <Image
           src="/logo.png"
           alt="Haunted Name"
-          width={800}
-          height={333}
-          className="w-full max-w-lg"
+          width={400}
+          height={291}
+          // className="w-full max-w-lg"
           priority
         />
         <p className="text-lg text-muted-foreground max-w-2xl">
-          Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya. Masukkan namamu dan temukan sisi gaib dirimu.
+          Setiap nama menyimpan cerita, setiap cerita memiliki penunggunya.
         </p>
       </div>
 
