@@ -9,7 +9,7 @@ export default function Home() {
 
       <div className="z-10 flex flex-col items-center text-center space-y-6 mb-12">
         <Image
-          src="https://storage.googleapis.com/aifirebase-7a250.appspot.com/user_images/D_sD-wU4E_e_Qe_7_n8yL/haunted-name.png"
+          src="/logo.png"
           alt="Haunted Name"
           width={800}
           height={333}
